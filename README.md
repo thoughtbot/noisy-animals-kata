@@ -24,17 +24,16 @@ Start by making a list of the problems you can identify in NoisyAnimal (it will 
 1. Make sure the tests pass
 
 ### Refactoring (one problem at a time)
-1. Revert your code
-2. Go back to the list of problems and take one
-3. Address only that one problem
-4. Make sure the tests pass
-5. Choose another item on the list and go to step 3
-6. Repeat until your list is addressed
+1. Go back to the list of problems and take one
+2. Address only that one problem
+3. Make sure the tests pass
+4. Choose another item on the list and go to step 3
+5. Repeat until your list is addressed
 
 ### Self reflection
 - Do you notice anything different between Big Bang and Refactoring approaches?
 - Did your list of problems increase as you worked?
 - Did some items on your list of problems go away, or change?
 - Was one approach faster than the other?
-- If you try both Big Bang and Refactoring approaches a few times (revert between each), how does your approach change over time?
+- If you try both Big Bang and Refactoring approaches a few times (could be over days or weeks - revert between each attempt), how does your approach change over time?
 
