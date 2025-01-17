@@ -47,13 +47,8 @@ class NoisyAnimal
   end
 
   def make_mammal_noise(is_loud:)
-    if is_loud
-      if mammal_noise
-        2.times { puts mammal_noise }
-      end
-    else
-      puts mammal_noise
-    end
+    puts mammal_noise
+    puts mammal_noise if is_loud
   end
 
   def bird?
