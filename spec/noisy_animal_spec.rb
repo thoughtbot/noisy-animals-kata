@@ -77,10 +77,10 @@ describe NoisyAnimal do
       expect { animal.make_noise(false) }.to output("caw\n").to_stdout
     end
 
-    it "quiet hadedahs still squawk" do
+    it "quiet hadedahs do not exist" do
       animal = NoisyAnimal.new("hadedah")
 
-      expect { animal.make_noise(false) }.to output("squawk\n").to_stdout
+      expect { animal.make_noise(false) }.to raise_error(/no such thing/)
     end
   end
 end

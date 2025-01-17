@@ -37,3 +37,14 @@ Start by making a list of the problems you can identify in NoisyAnimal (it will 
 - Was one approach faster than the other?
 - If you try both Big Bang and Refactoring approaches a few times (could be over days or weeks - revert between each attempt), how does your approach change over time?
 
+## Bonus requirements
+Try adding these animals:
+
+A snake that makes the noise "slither"
+A mouse that is so silent that it outputs only blank lines
+
+Support the `true` or `false` values for the `is_loud` flag in both cases.
+
+Is it easier to do this after or before you addressed the problems in the code that you identified earlier?
+
+Don't forget to add tests for the new cases!

@@ -51,6 +51,8 @@ class NoisyAnimal
       if species == "hadedah"
         puts "squawk"
       end
+    else
+      raise "there is no such thing as a quiet hadedah!" if species == "hadedah"
     end
   end
 
