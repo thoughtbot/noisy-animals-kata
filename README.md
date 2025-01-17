@@ -13,38 +13,30 @@ bundle exec rspec
 ```
 
 ## The exercise
+This small exercise is designed to help thinking about and improve code.
+
 The NoisyAnimal class has some poor code in it. Can you spot and fix some problems?
 
-This small exercise is designed to think about and improve code.
-
-Start by making a list of the problems you can identify in NoisyAnimal (it will be interesting to compare lists with someone else, but don't assume that there is one correct answer).
-
-### Big Bang approach
-1. Come up with a design that feels like it should address your list of problems and implement it
-1. Make sure the tests pass
-
-### Refactoring (one problem at a time)
-1. Go back to the list of problems and take one
-2. Address only that one problem
-3. Make sure the tests pass
-4. Choose another item on the list and go to step 3
-5. Repeat until your list is addressed
-
-### Self reflection
-- Do you notice anything different between Big Bang and Refactoring approaches?
-- Did your list of problems increase as you worked?
-- Did some items on your list of problems go away, or change?
-- Was one approach faster than the other?
-- If you try both Big Bang and Refactoring approaches a few times (could be over days or weeks - revert between each attempt), how does your approach change over time?
-
-## Bonus requirements
-Try adding these animals:
+### New requirements are so great!
+When/If you're feeling comfortable with the code, try adding these animals:
 
 A snake that makes the noise "slither"
 A mouse that is so silent that it outputs only blank lines
 
 Support the `true` or `false` values for the `is_loud` flag in both cases.
 
-Is it easier to do this after or before you addressed the problems in the code that you identified earlier?
+Don't forget the tests for your new requirements! Don't change any existing tests.
 
-Don't forget to add tests for the new cases!
+## Self reflection before you start
+- What problems can you identify if you think for 5 minutes before you start changing code?
+- What sort of changes do you think will address these problems?
+
+## Self reflection after trying to make changes
+- Does your starting list of problems still feel complete?
+- If you rewrote the list now, would it be different? How and why?
+- Does your current assessment of the NoisyAnimal problems feel similar or different to other code you read or work with?
+- Have you found yourself trying something and then realising it wouldn't work? How easy was it to get back to something that did work?
+- Do you make git commits as you make your changes?
+- How often do you run the tests? What if you could only run them once every 10 minutes? Or 30 minutes?
+- What would it take to run the tests every time you changed a line of `noisy_animal.rb`?
+- Is it easier to ad the new animals before or after cleaning up the code?
