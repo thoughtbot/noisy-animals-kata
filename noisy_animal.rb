@@ -17,6 +17,10 @@ class NoisyAnimal
   end
 
   def make_noise(is_loud: true)
+    if species == "hadedah" && !is_loud
+      raise "there is no such thing as a quiet hadedah!"
+    end
+
     if bird?
       make_bird_noise(is_loud:)
     else
@@ -31,11 +35,7 @@ class NoisyAnimal
 
   def make_bird_noise(is_loud:)
     puts bird_noise
-    if is_loud
-      puts bird_noise
-    elsif species == "hadedah"
-      raise "there is no such thing as a quiet hadedah!"
-    end
+    puts bird_noise if is_loud
   end
 
   def make_mammal_noise(is_loud:)
