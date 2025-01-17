@@ -83,4 +83,13 @@ describe NoisyAnimal do
       expect { animal.make_noise(is_loud: false) }.to raise_error(/no such thing/)
     end
   end
+
+  context "when animal is a mouse" do
+    it "makes no noise", :aggregate_failures do
+      animal = NoisyAnimal.new("mouse")
+
+      expect { animal.make_noise(is_loud: false) }.to output("\n").to_stdout
+      expect { animal.make_noise(is_loud: true) }.to output("\n").to_stdout
+    end
+  end
 end
