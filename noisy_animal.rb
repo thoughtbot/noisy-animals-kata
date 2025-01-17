@@ -6,6 +6,11 @@ class NoisyAnimal
     "dog" => "woof",
     "leopard" => "growl",
   }.freeze
+  BIRD_NOISES = {
+    "owl" => "hoot",
+    "eagle" => "caw",
+    "hadedah" => "squawk",
+  }.freeze
 
   def initialize(species)
     @species = species
@@ -22,27 +27,14 @@ class NoisyAnimal
   private
 
   def mammal_noise = @mammal_noise ||= MAMMAL_NOISES[species]
+  def bird_noise = @bird_noise ||= BIRD_NOISES[species]
 
   def make_bird_noise(is_loud:)
-    if species == "hadedah"
-      puts "squawk"
-    elsif species == "eagle"
-      puts "caw"
-    else
-      puts "hoot"
-    end
+    puts bird_noise
     if is_loud
-      if species == "owl"
-        puts "hoot"
-      end
-      if species == "eagle"
-        puts "caw"
-      end
-      if species == "hadedah"
-        puts "squawk"
-      end
-    else
-      raise "there is no such thing as a quiet hadedah!" if species == "hadedah"
+      puts bird_noise
+    elsif species == "hadedah"
+      raise "there is no such thing as a quiet hadedah!"
     end
   end
 
