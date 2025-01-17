@@ -1,6 +1,12 @@
 class NoisyAnimal
   attr_reader :species
 
+  MAMMAL_NOISES = {
+    "cat" => "meow",
+    "dog" => "woof",
+    "leopard" => "growl",
+  }.freeze
+
   def initialize(species)
     @species = species
   end
@@ -15,13 +21,7 @@ class NoisyAnimal
 
   private
 
-  def mammal_noise
-    {
-      "cat" => "meow",
-      "dog" => "woof",
-      "leopard" => "growl",
-    }[species]
-  end
+  def mammal_noise = @mammal_noise ||= MAMMAL_NOISES[species]
 
   def make_bird_noise(is_loud:)
     if species == "hadedah"
