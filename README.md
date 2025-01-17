@@ -20,8 +20,8 @@ The NoisyAnimal class has some poor code in it. Can you spot and fix some proble
 ### New requirements are so great!
 When/If you're feeling comfortable with the code, try adding these animals:
 
-A snake that makes the noise "hiss" when it is loud and "slither" when it is not loud
-A mouse that is so silent that it outputs only one blank line, whether loud or quiet
+- A snake that makes the noise "hiss" when it is loud and "slither" when it is not loud
+- A mouse that is so silent that it outputs only one blank line, whether loud or quiet
 
 Support the `true` or `false` values for the `is_loud` flag in both cases.
 
