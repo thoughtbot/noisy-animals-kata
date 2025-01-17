@@ -20,13 +20,10 @@ class NoisyAnimal
   def make_noise(is_loud: true)
     raise "there is no such thing as a quiet hadedah!" if species == "hadedah" && !is_loud
     return puts if species == "mouse"
+    return puts snake_noise(is_loud:) if noise.nil?
 
-    if noise
-      puts noise
-      puts noise if is_loud
-    else
-      puts snake_noise(is_loud:)
-    end
+    puts noise
+    puts noise if is_loud
   end
 
   private
