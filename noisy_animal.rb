@@ -21,27 +21,15 @@ class NoisyAnimal
       raise "there is no such thing as a quiet hadedah!"
     end
 
-    if bird?
-      make_bird_noise(is_loud:)
-    else
-      make_mammal_noise(is_loud:)
-    end
+    noise = bird? ? bird_noise : mammal_noise
+    puts noise
+    puts noise if is_loud
   end
 
   private
 
   def mammal_noise = @mammal_noise ||= MAMMAL_NOISES[species]
   def bird_noise = @bird_noise ||= BIRD_NOISES[species]
-
-  def make_bird_noise(is_loud:)
-    puts bird_noise
-    puts bird_noise if is_loud
-  end
-
-  def make_mammal_noise(is_loud:)
-    puts mammal_noise
-    puts mammal_noise if is_loud
-  end
 
   def bird?
     species == "owl" || species == "eagle" || species == "hadedah"
