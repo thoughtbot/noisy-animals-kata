@@ -28,7 +28,5 @@ class NoisyAnimal
 
   private
 
-  def bird?
-    species == "owl" || species == "eagle" || species == "hadedah"
-  end
+  def bird? = BIRD_NOISES.keys.include?(species)
 end
