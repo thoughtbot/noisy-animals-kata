@@ -1,5 +1,5 @@
 class NoisyAnimal
-  attr_reader :species, :noise
+  attr_reader :species
 
   MAMMAL_NOISES = {
     "cat" => "meow",
@@ -25,6 +25,8 @@ class NoisyAnimal
   end
 
   private
+
+  attr_reader :noise
 
   def bird? = BIRD_NOISES.keys.include?(species)
 end
