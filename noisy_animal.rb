@@ -21,8 +21,12 @@ class NoisyAnimal
     raise "there is no such thing as a quiet hadedah!" if species == "hadedah" && !is_loud
     return puts if species == "mouse"
 
-    puts noise
-    puts noise if is_loud
+    if noise
+      puts noise
+      puts noise if is_loud
+    else
+      puts snake_noise(is_loud:)
+    end
   end
 
   private
@@ -30,4 +34,5 @@ class NoisyAnimal
   attr_reader :noise
 
   def bird? = BIRD_NOISES.keys.include?(species)
+  def snake_noise(is_loud:) = is_loud ? "hiss" : "slither"
 end
