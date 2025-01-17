@@ -1,12 +1,10 @@
 class NoisyAnimal
   attr_reader :species
 
-  MAMMAL_NOISES = {
+  NOISES = {
     "cat" => "meow",
     "dog" => "woof",
     "leopard" => "growl",
-  }.freeze
-  BIRD_NOISES = {
     "owl" => "hoot",
     "eagle" => "caw",
     "hadedah" => "squawk",
@@ -14,7 +12,7 @@ class NoisyAnimal
 
   def initialize(species)
     @species = species
-    @noise = bird? ? BIRD_NOISES[species] : MAMMAL_NOISES[species]
+    @noise = NOISES[species]
   end
 
   def make_noise(is_loud: true)
@@ -30,6 +28,5 @@ class NoisyAnimal
 
   attr_reader :noise
 
-  def bird? = BIRD_NOISES.keys.include?(species)
   def snake_noise(is_loud:) = is_loud ? "hiss" : "slither"
 end
