@@ -5,7 +5,7 @@ class NoisyAnimal
     @species = species
   end
 
-  def make_noise(is_loud = true)
+  def make_noise(is_loud: true)
     if is_bird && !is_loud
       make_bird_noise(is_loud: false)
     end

@@ -30,19 +30,19 @@ describe NoisyAnimal do
     it "cat goes meow" do
       animal = NoisyAnimal.new("cat")
 
-      expect { animal.make_noise(false) }.to output("meow\n").to_stdout
+      expect { animal.make_noise(is_loud: false) }.to output("meow\n").to_stdout
     end
 
     it "dog goes woof" do
       animal = NoisyAnimal.new("dog")
 
-      expect { animal.make_noise(false) }.to output("woof\n").to_stdout
+      expect { animal.make_noise(is_loud: false) }.to output("woof\n").to_stdout
     end
 
     it "leopard goes growl" do
       animal = NoisyAnimal.new("leopard")
 
-      expect { animal.make_noise(false) }.to output("growl\n").to_stdout
+      expect { animal.make_noise(is_loud: false) }.to output("growl\n").to_stdout
     end
   end
 
@@ -50,37 +50,37 @@ describe NoisyAnimal do
     it "loud owls hoot twice" do
       animal = NoisyAnimal.new("owl")
 
-      expect { animal.make_noise(true) }.to output("hoot\nhoot\n").to_stdout
+      expect { animal.make_noise(is_loud: true) }.to output("hoot\nhoot\n").to_stdout
     end
 
     it "loud eagles caw twice" do
       animal = NoisyAnimal.new("eagle")
 
-      expect { animal.make_noise(true) }.to output("caw\ncaw\n").to_stdout
+      expect { animal.make_noise(is_loud: true) }.to output("caw\ncaw\n").to_stdout
     end
 
     it "loud hadedahs squawk twice" do
       animal = NoisyAnimal.new("hadedah")
 
-      expect { animal.make_noise(true) }.to output("squawk\nsquawk\n").to_stdout
+      expect { animal.make_noise(is_loud: true) }.to output("squawk\nsquawk\n").to_stdout
     end
 
     it "quiet owls hoot" do
       animal = NoisyAnimal.new("owl")
 
-      expect { animal.make_noise(false) }.to output("hoot\n").to_stdout
+      expect { animal.make_noise(is_loud: false) }.to output("hoot\n").to_stdout
     end
 
     it "quiet eagles caw" do
       animal = NoisyAnimal.new("eagle")
 
-      expect { animal.make_noise(false) }.to output("caw\n").to_stdout
+      expect { animal.make_noise(is_loud: false) }.to output("caw\n").to_stdout
     end
 
     it "quiet hadedahs do not exist" do
       animal = NoisyAnimal.new("hadedah")
 
-      expect { animal.make_noise(false) }.to raise_error(/no such thing/)
+      expect { animal.make_noise(is_loud: false) }.to raise_error(/no such thing/)
     end
   end
 end
