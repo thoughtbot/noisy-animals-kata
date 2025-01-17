@@ -1,5 +1,5 @@
 class NoisyAnimal
-  attr_reader :species
+  attr_reader :species, :noise
 
   MAMMAL_NOISES = {
     "cat" => "meow",
@@ -14,6 +14,7 @@ class NoisyAnimal
 
   def initialize(species)
     @species = species
+    @noise = bird? ? BIRD_NOISES[species] : MAMMAL_NOISES[species]
   end
 
   def make_noise(is_loud: true)
@@ -21,15 +22,11 @@ class NoisyAnimal
       raise "there is no such thing as a quiet hadedah!"
     end
 
-    noise = bird? ? bird_noise : mammal_noise
     puts noise
     puts noise if is_loud
   end
 
   private
-
-  def mammal_noise = @mammal_noise ||= MAMMAL_NOISES[species]
-  def bird_noise = @bird_noise ||= BIRD_NOISES[species]
 
   def bird?
     species == "owl" || species == "eagle" || species == "hadedah"
