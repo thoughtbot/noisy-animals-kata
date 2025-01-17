@@ -5,7 +5,7 @@ class NoisyAnimal
     @species = species
   end
 
-  def be_noisy
+  def make_noise_twice
     if species == "cat"
       puts "meow"
       puts "meow"
