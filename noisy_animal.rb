@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class NoisyAnimal
   attr_reader :species
 
@@ -14,7 +16,7 @@ class NoisyAnimal
         2.times { puts mammal_noise }
       end
       make_bird_noise(true) if is_bird
-    elsif ["cat", "dog", "leopard"].include?(species)
+    elsif %w[cat dog leopard].include?(species)
       puts mammal_noise
     end
   end
@@ -23,36 +25,36 @@ class NoisyAnimal
 
   def mammal_noise
     {
-      "cat" => "meow",
-      "dog" => "woof",
-      "leopard" => "growl",
+      'cat' => 'meow',
+      'dog' => 'woof',
+      'leopard' => 'growl'
     }[species]
   end
 
   def make_bird_noise(is_loud = true)
-    if species == "hadedah"
-      puts "squawk"
-    elsif species == "eagle"
-      puts "caw"
+    if species == 'hadedah'
+      puts 'squawk'
+    elsif species == 'eagle'
+      puts 'caw'
     else
-      puts "hoot"
+      puts 'hoot'
     end
     if is_loud
-      if species == "owl"
-        puts "hoot"
+      if species == 'owl'
+        puts 'hoot'
       end
-      if species == "eagle"
-        puts "caw"
+      if species == 'eagle'
+        puts 'caw'
       end
-      if species == "hadedah"
-        puts "squawk"
+      if species == 'hadedah'
+        puts 'squawk'
       end
     else
-      raise "there is no such thing as a quiet hadedah!" if species == "hadedah"
+      raise 'there is no such thing as a quiet hadedah!' if species == 'hadedah'
     end
   end
 
   def is_bird
-    species == "owl" || species == "eagle" || species == "hadedah"
+    species == 'owl' || species == 'eagle' || species == 'hadedah'
   end
 end
