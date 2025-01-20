@@ -11,18 +11,10 @@ class NoisyAnimal
 
   def make_noise(loud: true)
     animal = Animal.from_species(species)
-    if species == "hadedah"
-      if loud
-        animal.loud
-      else
-        animal.quiet
-      end
+    if loud
+      animal.loud
     else
-      if loud
-        animal.loud
-      else
-        animal.quiet
-      end
+      animal.quiet
     end
   end
 end
