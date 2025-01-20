@@ -8,16 +8,21 @@ class NoisyAnimal
   end
 
   def make_noise(loud: true)
-    if loud
-      if is_hadedah
+    if is_hadedah
+      if loud
         2.times { puts 'squawk' }
-      else
-        2.times { puts non_hadedah_noise }
       end
     else
-      if is_hadedah
+      if loud
+        2.times { puts non_hadedah_noise }
+      end
+    end
+    if is_hadedah
+      if !loud
         raise 'there is no such thing as a quiet hadedah!'
-      else
+      end
+    else
+      if !loud
         puts non_hadedah_noise
       end
     end
