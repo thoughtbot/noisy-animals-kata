@@ -32,6 +32,8 @@ class NoisyAnimal
       puts 'squawk'
     elsif species == 'eagle'
       puts 'caw'
+    elsif species == 'owl'
+      puts 'hoot'
     else
       puts 'hoot'
     end
