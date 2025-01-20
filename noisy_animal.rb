@@ -10,8 +10,8 @@ class NoisyAnimal
   def make_noise(loud: true)
     if loud
       if is_hadedah
-        puts 'squawk' if species == 'hadedah'
-        puts 'squawk' if species == 'hadedah'
+        puts 'squawk'
+        puts 'squawk'
       else
         2.times {puts non_hadedah_noise }
       end
