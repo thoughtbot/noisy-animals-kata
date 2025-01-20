@@ -9,7 +9,7 @@ class NoisyAnimal
 
   def make_noise(loud: true)
     if loud
-      2.times { puts mammal_noise } if mammal_noise
+      2.times { puts mammal_noise } if is_mammal
       if is_bird
         puts 'squawk' if species == 'hadedah'
         puts 'caw' if species == 'eagle'
