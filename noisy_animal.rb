@@ -7,11 +7,11 @@ class NoisyAnimal
     @species = species
   end
 
-  def make_noise(is_loud: true)
-    if is_bird && !is_loud
+  def make_noise(loud: true)
+    if is_bird && !loud
       make_bird_noise(false)
     end
-    if is_loud
+    if loud
       if mammal_noise
         2.times { puts mammal_noise }
       end
