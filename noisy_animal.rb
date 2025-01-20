@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'delegate'
+
 class NoisyAnimal
   attr_reader :species
 
@@ -8,35 +10,55 @@ class NoisyAnimal
   end
 
   def make_noise(loud: true)
-    if is_hadedah
+    if species == "hadedah"
       if loud
-        2.times { puts noise }
+        WithLoudVoice.new(Animal.from_species(species)).loud
       else
-        raise 'there is no such thing as a quiet hadedah!'
+        WithoutQuietVoice.new(Animal.from_species(species)).quiet
       end
     else
       if loud
-        2.times { puts noise }
+        WithLoudVoice.new(Animal.from_species(species)).loud
       else
-        puts noise
+        WithQuietVoice.new(Animal.from_species(species)).quiet
       end
     end
   end
+end
 
-  private
+class Animal
+  attr_accessor :noise
 
-  def noise
-    {
+  def self.from_species(species)
+    Animal.new({
       'cat' => 'meow',
       'dog' => 'woof',
       'leopard' => 'growl',
       'eagle' => 'caw',
       'owl' => 'hoot',
       'hadedah' => 'squawk'
-    }[species]
+    }[species])
   end
 
-  def is_hadedah
-    %w[hadedah].include?(species)
+  def initialize(noise)
+    @noise = noise
+  end
+end
+
+class WithQuietVoice < SimpleDelegator
+  def quiet
+    puts noise
+  end
+end
+
+class WithoutQuietVoice < SimpleDelegator
+  def quiet
+    raise "no such thing!"
+  end
+end
+
+class WithLoudVoice < SimpleDelegator
+  def loud
+    puts noise, noise
   end
 end
