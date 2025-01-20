@@ -18,8 +18,8 @@ class NoisyAnimal
         puts 'caw' if species == 'eagle'
         puts 'hoot' if species == 'owl'
 
-        puts 'hoot' if species == 'owl'
         puts 'caw' if species == 'eagle'
+        puts 'hoot' if species == 'owl'
       end
     else
       if is_mammal
