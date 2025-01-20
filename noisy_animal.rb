@@ -8,13 +8,9 @@ class NoisyAnimal
   end
 
   def make_noise(loud: true)
-    if is_bird && !loud
-      make_bird_noise(false)
-    end
+    make_bird_noise(false) if is_bird && !loud
     if loud
-      if mammal_noise
-        2.times { puts mammal_noise }
-      end
+      2.times { puts mammal_noise } if mammal_noise
       make_bird_noise(true) if is_bird
     elsif %w[cat dog leopard].include?(species)
       puts mammal_noise
@@ -40,17 +36,11 @@ class NoisyAnimal
       puts 'hoot'
     end
     if is_loud
-      if species == 'owl'
-        puts 'hoot'
-      end
-      if species == 'eagle'
-        puts 'caw'
-      end
-      if species == 'hadedah'
-        puts 'squawk'
-      end
-    else
-      raise 'there is no such thing as a quiet hadedah!' if species == 'hadedah'
+      puts 'hoot' if species == 'owl'
+      puts 'caw' if species == 'eagle'
+      puts 'squawk' if species == 'hadedah'
+    elsif species == 'hadedah'
+      raise 'there is no such thing as a quiet hadedah!'
     end
   end
 
