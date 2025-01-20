@@ -16,7 +16,7 @@ class NoisyAnimal
 end
 
 class Animal
-  attr_accessor :species, :noise
+  attr_accessor :noise
 
   def self.from_species(species)
     case species
