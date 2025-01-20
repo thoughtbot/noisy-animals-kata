@@ -46,19 +46,13 @@ class Animal
 end
 
 class WithQuietVoice < SimpleDelegator
-  def quiet
-    puts noise
-  end
+  def quiet = puts noise
 end
 
 class WithoutQuietVoice < SimpleDelegator
-  def quiet
-    raise "no such thing!"
-  end
+  def quiet = raise "no such thing!"
 end
 
 class WithLoudVoice < SimpleDelegator
-  def loud
-    puts noise, noise
-  end
+  def loud = puts noise, noise
 end
