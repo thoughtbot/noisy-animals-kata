@@ -23,8 +23,9 @@ class NoisyAnimal
     else
       if is_mammal
         puts mammal_noise
+      elsif is_hadedah
+        raise 'there is no such thing as a quiet hadedah!'
       elsif is_bird
-        raise 'there is no such thing as a quiet hadedah!' if species == 'hadedah'
         puts 'caw' if species == 'eagle'
         puts 'hoot' if species == 'owl'
       end
@@ -39,6 +40,10 @@ class NoisyAnimal
       'dog' => 'woof',
       'leopard' => 'growl'
     }[species]
+  end
+
+  def is_hadedah
+    %w[hadedah].include?(species)
   end
 
   def is_mammal
