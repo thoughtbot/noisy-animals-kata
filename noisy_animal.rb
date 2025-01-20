@@ -10,17 +10,18 @@ class NoisyAnimal
   end
 
   def make_noise(loud: true)
+    animal = Animal.from_species(species)
     if species == "hadedah"
       if loud
-        WithLoudVoice.new(Animal.from_species(species)).loud
+        WithLoudVoice.new(animal).loud
       else
-        WithoutQuietVoice.new(Animal.from_species(species)).quiet
+        WithoutQuietVoice.new(animal).quiet
       end
     else
       if loud
-        WithLoudVoice.new(Animal.from_species(species)).loud
+        WithLoudVoice.new(animal).loud
       else
-        WithQuietVoice.new(Animal.from_species(species)).quiet
+        WithQuietVoice.new(animal).quiet
       end
     end
   end
