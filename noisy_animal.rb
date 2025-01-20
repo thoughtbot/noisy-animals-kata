@@ -11,11 +11,7 @@ class NoisyAnimal
 
   def make_noise(loud: true)
     animal = Animal.from_species(species)
-    if loud
-      animal.loud
-    else
-      animal.quiet
-    end
+    loud ? animal.loud : animal.quiet
   end
 end
 
@@ -23,20 +19,23 @@ class Animal
   attr_accessor :species, :noise
 
   def self.from_species(species)
-    animal = Animal.new(species, {
-      'cat' => 'meow',
-      'dog' => 'woof',
-      'leopard' => 'growl',
-      'eagle' => 'caw',
-      'owl' => 'hoot',
-      'hadedah' => 'squawk'
-    }[species])
-    loud_animal = WithLoudVoice.new(animal)
-    species == 'hadedah' ? WithoutQuietVoice.new(loud_animal) : WithQuietVoice.new(loud_animal)
+    case species
+    when 'hadedah'
+      WithLoudVoice.new(WithoutQuietVoice.new(Animal.new('squawk')))
+    when 'dog'
+      WithLoudVoice.new(WithQuietVoice.new(Animal.new('woof')))
+    when 'leopard'
+      WithLoudVoice.new(WithQuietVoice.new(Animal.new('growl')))
+    when 'cat'
+      WithLoudVoice.new(WithQuietVoice.new(Animal.new('meow')))
+    when 'eagle'
+      WithLoudVoice.new(WithQuietVoice.new(Animal.new('caw')))
+    when 'owl'
+      WithLoudVoice.new(WithQuietVoice.new(Animal.new('hoot')))
+    end
   end
 
-  def initialize(species, noise)
-    @species = species
+  def initialize(noise)
     @noise = noise
   end
 end
