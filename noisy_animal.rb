@@ -43,6 +43,6 @@ class NoisyAnimal
   end
 
   def is_bird
-    species == 'owl' || species == 'eagle' || species == 'hadedah'
+    %w[owl eagle hadedah].include?(species)
   end
 end
