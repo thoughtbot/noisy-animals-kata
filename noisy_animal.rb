@@ -31,7 +31,6 @@ class NoisyAnimal
     puts 'squawk' if species == 'hadedah'
     puts 'caw' if species == 'eagle'
     puts 'hoot' if species == 'owl'
-    puts 'hoot' unless %w[hadedah eagle owl].include?(species)
 
     raise 'there is no such thing as a quiet hadedah!' if species == 'hadedah' && !is_loud
 
