@@ -35,12 +35,12 @@ class NoisyAnimal
     else
       puts 'hoot'
     end
+    raise 'there is no such thing as a quiet hadedah!' if species == 'hadedah' && !is_loud
+
     if is_loud
       puts 'hoot' if species == 'owl'
       puts 'caw' if species == 'eagle'
       puts 'squawk' if species == 'hadedah'
-    elsif species == 'hadedah'
-      raise 'there is no such thing as a quiet hadedah!'
     end
   end
 
