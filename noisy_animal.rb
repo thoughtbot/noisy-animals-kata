@@ -31,7 +31,6 @@ class NoisyAnimal
   end
 
   def make_quiet_bird_noise
-    puts 'squawk' if species == 'hadedah'
     puts 'caw' if species == 'eagle'
     puts 'hoot' if species == 'owl'
   end
