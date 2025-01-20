@@ -16,36 +16,35 @@ class NoisyAnimal
 end
 
 class Animal
-  attr_accessor :noise
-
   def self.from_species(species)
     case species
     when 'hadedah'
-      WithLoudVoice.new(WithoutQuietVoice.new(Animal.new('squawk')))
+      WithLoudVoice.new(WithoutQuietVoice.new(Animal.new), %w[squawk squawk])
     when 'dog'
-      WithLoudVoice.new(WithQuietVoice.new(Animal.new('woof')))
+      WithLoudVoice.new(WithQuietVoice.new(Animal.new, 'woof'), %w[woof woof])
     when 'leopard'
-      WithLoudVoice.new(WithQuietVoice.new(Animal.new('growl')))
+      WithLoudVoice.new(WithQuietVoice.new(Animal.new, 'growl'), %w[growl growl])
     when 'cat'
-      WithLoudVoice.new(WithQuietVoice.new(Animal.new('meow')))
+      WithLoudVoice.new(WithQuietVoice.new(Animal.new, 'meow'), %w[meow meow])
     when 'eagle'
-      WithLoudVoice.new(WithQuietVoice.new(Animal.new('caw')))
+      WithLoudVoice.new(WithQuietVoice.new(Animal.new, 'caw'), %w[caw caw])
     when 'owl'
-      WithLoudVoice.new(WithQuietVoice.new(Animal.new('hoot')))
+      WithLoudVoice.new(WithQuietVoice.new(Animal.new, 'hoot'), %w[hoot hoot])
     when 'snake'
-      WithCustomLoudVoice.new(WithQuietVoice.new(Animal.new('slither')), 'hiss')
+      WithLoudVoice.new(WithQuietVoice.new(Animal.new, 'slither'), 'hiss')
     when 'mouse'
-      WithCustomLoudVoice.new(WithQuietVoice.new(Animal.new('')), '')
+      WithLoudVoice.new(WithQuietVoice.new(Animal.new, ''), '')
     end
-  end
-
-  def initialize(noise)
-    @noise = noise
   end
 end
 
 class WithQuietVoice < SimpleDelegator
-  def quiet = puts noise
+  def initialize(obj, quiet)
+    super(obj)
+    @quiet = quiet
+  end
+
+  def quiet = puts @quiet
 end
 
 class WithoutQuietVoice < SimpleDelegator
@@ -53,14 +52,10 @@ class WithoutQuietVoice < SimpleDelegator
 end
 
 class WithLoudVoice < SimpleDelegator
-  def loud = puts noise, noise
-end
-
-class WithCustomLoudVoice < SimpleDelegator
-  def initialize(obj, custom_voice)
+  def initialize(obj, loud)
     super(obj)
-    @custom_voice = custom_voice
+    @loud = loud
   end
 
-  def loud = puts @custom_voice
+  def loud = puts @loud
 end
