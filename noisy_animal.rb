@@ -11,21 +11,22 @@ class NoisyAnimal
     if loud
       if is_mammal
         2.times { puts mammal_noise }
-      elsif is_bird
+      elsif is_hadedah
         puts 'squawk' if species == 'hadedah'
+        puts 'squawk' if species == 'hadedah'
+      elsif is_non_hadedah_bird
         puts 'caw' if species == 'eagle'
         puts 'hoot' if species == 'owl'
 
         puts 'hoot' if species == 'owl'
         puts 'caw' if species == 'eagle'
-        puts 'squawk' if species == 'hadedah'
       end
     else
       if is_mammal
         puts mammal_noise
       elsif is_hadedah
         raise 'there is no such thing as a quiet hadedah!'
-      elsif is_bird
+      elsif is_non_hadedah_bird
         puts 'caw' if species == 'eagle'
         puts 'hoot' if species == 'owl'
       end
@@ -50,7 +51,7 @@ class NoisyAnimal
     %w[cat dog leopard].include?(species)
   end
 
-  def is_bird
+  def is_non_hadedah_bird
     %w[owl eagle hadedah].include?(species)
   end
 end
