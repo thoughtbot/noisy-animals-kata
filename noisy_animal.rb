@@ -11,18 +11,13 @@ class NoisyAnimal
     if is_hadedah
       if loud
         2.times { puts 'squawk' }
+      else
+        raise 'there is no such thing as a quiet hadedah!'
       end
     else
       if loud
         2.times { puts non_hadedah_noise }
-      end
-    end
-    if is_hadedah
-      if !loud
-        raise 'there is no such thing as a quiet hadedah!'
-      end
-    else
-      if !loud
+      else
         puts non_hadedah_noise
       end
     end
