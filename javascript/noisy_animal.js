@@ -16,6 +16,25 @@ function createNoisyAnimal(species) {
     return noises[species];
   }
 
+  function makeBirdNoiseLoud() {
+    if (species === 'hadedah') {
+      console.log('squawk');
+    } else if (species === 'eagle') {
+      console.log('caw');
+    } else {
+      console.log('hoot');
+    }
+    if (species === 'owl') {
+      console.log('hoot');
+    }
+    if (species === 'eagle') {
+      console.log('caw');
+    }
+    if (species === 'hadedah') {
+      console.log('squawk');
+    }
+  }
+
   function makeBirdNoise(isLoud = true) {
     if (species === 'hadedah') {
       console.log('squawk');
@@ -49,7 +68,7 @@ function createNoisyAnimal(species) {
         console.log(mammalNoise());
       }
       if (isBird()) {
-        makeBirdNoise(loud);
+        makeBirdNoiseLoud();
       }
     } else {
       if (isMammal()) {
