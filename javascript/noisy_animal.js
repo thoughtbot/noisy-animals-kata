@@ -32,14 +32,11 @@ function createNoisyAnimal(species) {
   function makeBirdNoiseSoft() {
     if (species === 'hadedah') {
       console.log('squawk');
+      throw new Error('there is no such thing as a quiet hadedah!');
     } else if (species === 'eagle') {
       console.log('caw');
     } else {
       console.log('hoot');
-    }
-
-    if (species === 'hadedah') {
-      throw new Error('there is no such thing as a quiet hadedah!');
     }
   }
 
