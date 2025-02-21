@@ -9,43 +9,55 @@ function createNoisyAnimal(species) {
   }
 
   function makeNoise({ loud = true } = {}) {
-    if (species === 'cat') {
+    switch (species) {
+    case 'cat':
       if (loud) {
         loudSound('meow');
       } else {
         quietSound('meow');
       }
-    } else if (species === 'dog') {
+      break;
+
+    case 'dog':
       if (loud) {
         loudSound('woof');
       } else {
         quietSound('woof');
       }
-    } else if (species === 'leopard') {
+      break;
+
+    case 'leopard':
       if (loud) {
         loudSound('growl');
       } else {
         quietSound('growl');
       }
-    } else if (species === 'hadedah') {
+      break;
+
+    case 'hadedah':
       if (loud) {
         loudSound('squawk');
       } else {
         quietSound('squawk');
         throw new Error('there is no such thing as a quiet hadedah!');
       }
-    } else if (species === 'eagle') {
+      break;
+
+    case 'eagle':
       if (loud) {
         loudSound('caw');
       } else {
         quietSound('caw');
       }
-    } else if (species === 'owl') {
+      break;
+
+    case 'owl':
       if (loud) {
         loudSound('hoot');
       } else {
         quietSound('hoot');
       }
+      break;
     }
   }
 
