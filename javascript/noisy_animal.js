@@ -21,8 +21,7 @@ function createNoisyAnimal(species) {
       } else {
         console.log('growl');
       }
-    }
-    if (species === 'hadedah') {
+    } else if (species === 'hadedah') {
       if (loud) {
         console.log('squawk');
         console.log('squawk');
