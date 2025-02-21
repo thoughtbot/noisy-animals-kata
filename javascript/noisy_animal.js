@@ -35,7 +35,7 @@ function createNoisyAnimal(species) {
     }
   }
 
-  function makeBirdNoise(isLoud = true) {
+  function makeBirdNoiseSoft() {
     if (species === 'hadedah') {
       console.log('squawk');
     } else if (species === 'eagle') {
@@ -44,20 +44,8 @@ function createNoisyAnimal(species) {
       console.log('hoot');
     }
 
-    if (isLoud) {
-      if (species === 'owl') {
-        console.log('hoot');
-      }
-      if (species === 'eagle') {
-        console.log('caw');
-      }
-      if (species === 'hadedah') {
-        console.log('squawk');
-      }
-    } else {
-      if (species === 'hadedah') {
-        throw new Error('there is no such thing as a quiet hadedah!');
-      }
+    if (species === 'hadedah') {
+      throw new Error('there is no such thing as a quiet hadedah!');
     }
   }
 
@@ -74,7 +62,7 @@ function createNoisyAnimal(species) {
       if (isMammal()) {
         console.log(mammalNoise());
       } else if (isBird()) {
-        makeBirdNoise(loud);
+        makeBirdNoiseSoft();
       }
     }
   }
