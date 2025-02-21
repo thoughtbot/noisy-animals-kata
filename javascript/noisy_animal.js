@@ -1,24 +1,16 @@
 function createNoisyAnimal(species) {
-  function mammalNoise() {
-    const noises = {
-      cat: 'meow',
-      dog: 'woof',
-      leopard: 'growl'
-    };
-    return noises[species];
-  }
-
-  function makeMammalNoise() {
-    console.log(mammalNoise());
-  }
-
   function makeNoise({ loud = true } = {}) {
     if (['cat', 'dog', 'leopard'].includes(species)) {
+      noise = {
+        cat: 'meow',
+        dog: 'woof',
+        leopard: 'growl'
+      }[species];
       if (loud) {
-        makeMammalNoise();
-        makeMammalNoise();
+        console.log(noise);
+        console.log(noise);
       } else {
-        makeMammalNoise();
+        console.log(noise);
       }
     }
     if (species === 'hadedah') {
