@@ -51,10 +51,12 @@ function createNoisyAnimal(species) {
       if (isBird()) {
         makeBirdNoise(loud);
       }
-    } else if (isMammal()) {
-      console.log(mammalNoise());
-    } else if (isBird()) {
-      makeBirdNoise(loud);
+    } else {
+      if (isMammal()) {
+        console.log(mammalNoise());
+      } else if (isBird()) {
+        makeBirdNoise(loud);
+      }
     }
   }
 
