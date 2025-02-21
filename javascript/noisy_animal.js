@@ -1,8 +1,4 @@
 function createNoisyAnimal(species) {
-  function isMammal() {
-    return ['cat', 'dog', 'leopard'].includes(species);
-  }
-
   function mammalNoise() {
     const noises = {
       cat: 'meow',
@@ -17,7 +13,7 @@ function createNoisyAnimal(species) {
   }
 
   function makeNoise({ loud = true } = {}) {
-    if (isMammal()) {
+    if (['cat', 'dog', 'leopard'].includes(species)) {
       if (loud) {
         makeMammalNoise();
         makeMammalNoise();
