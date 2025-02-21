@@ -45,18 +45,18 @@ function createNoisyAnimal(species) {
   }
 
   function makeNoise({ loud = true } = {}) {
-    if (loud) {
-      if (isMammal()) {
+    if (isMammal()) {
+      if (loud) {
         makeMammalNoise();
+        makeMammalNoise();
+      } else {
         makeMammalNoise();
       }
-      if (isBird()) {
+    }
+    if (isBird()) {
+      if (loud) {
         makeBirdNoiseLoud();
-      }
-    } else {
-      if (isMammal()) {
-        makeMammalNoise();
-      } else if (isBird()) {
+      } else {
         makeBirdNoiseSoft();
       }
     }
