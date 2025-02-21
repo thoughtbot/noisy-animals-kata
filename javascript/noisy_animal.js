@@ -26,11 +26,9 @@ function createNoisyAnimal(species) {
     }
     if (species === 'owl') {
       console.log('hoot');
-    }
-    if (species === 'eagle') {
+    } else if (species === 'eagle') {
       console.log('caw');
-    }
-    if (species === 'hadedah') {
+    } else if (species === 'hadedah') {
       console.log('squawk');
     }
   }
