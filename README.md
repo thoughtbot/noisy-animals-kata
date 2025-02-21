@@ -4,21 +4,27 @@ This small exercise is designed to help thinking about and improve code.
 ## Context
 The Noisy Animal code outputs noise for several animals and birds. Client code can request a noise that is loud or not. [Hadedahs](https://www.youtube.com/results?search_query=hadedah+noise) do not generate quiet noises.
 
-### New requirements are so great!
+## Self reflection before you start
+Looking at [the code for your language of choice](#the-code):
+
+- What domain (related to animals and noise) concepts can you identify and what are the important differences between these?
+- What problems can you identify if you think for 5 minutes before you start changing code?
+- What sort of changes do you think will address these problems?
+
+## Try cleaning it up!
+It's normal to feel like this code hides some important concepts. It is pretty bad. Are you able to fix some of the problems you identified?
+
+## New requirements are so great!
 When/If you're feeling comfortable with the code, try adding these animals:
 
 - A snake that makes the noise "hiss" when it is loud and "slither" when it is not loud
 - A mouse that is so silent that it outputs exactly one blank line, whether loud or quiet
 
-## Self reflection before you start
-- What domain (related to animals and noise) concepts can you identify and what are the important differences between these? It's normal to feel like this code hides the concepts, you might feel better after trying the exercise
-- What problems can you identify if you think for 5 minutes before you start changing code?
-- What sort of changes do you think will address these problems?
-
 ## The code
 Language-specific instructions are here:
 
 - [Ruby](/ruby)
+- [Javascript](/javascript)
 
 ## Self reflection after trying to make changes
 - Does your starting list of problems still feel complete?
