@@ -1,27 +1,25 @@
 function createNoisyAnimal(species) {
   function makeNoise({ loud = true } = {}) {
-    if (['cat', 'dog', 'leopard'].includes(species)) {
-      if (species === 'cat') {
-        if (loud) {
-          console.log('meow');
-          console.log('meow');
-        } else {
-          console.log('meow');
-        }
-      } else if (species === 'dog') {
-        if (loud) {
-          console.log('woof');
-          console.log('woof');
-        } else {
-          console.log('woof');
-        }
-      } else if (species === 'leopard') {
-        if (loud) {
-          console.log('growl');
-          console.log('growl');
-        } else {
-          console.log('growl');
-        }
+    if (species === 'cat') {
+      if (loud) {
+        console.log('meow');
+        console.log('meow');
+      } else {
+        console.log('meow');
+      }
+    } else if (species === 'dog') {
+      if (loud) {
+        console.log('woof');
+        console.log('woof');
+      } else {
+        console.log('woof');
+      }
+    } else if (species === 'leopard') {
+      if (loud) {
+        console.log('growl');
+        console.log('growl');
+      } else {
+        console.log('growl');
       }
     }
     if (species === 'hadedah') {
