@@ -1,47 +1,50 @@
 function createNoisyAnimal(species) {
+  function loudSound(sound) {
+    console.log(sound);
+    console.log(sound);
+  }
+
+  function quietSound(sound) {
+    console.log(sound);
+  }
+
   function makeNoise({ loud = true } = {}) {
     if (species === 'cat') {
       if (loud) {
-        console.log('meow');
-        console.log('meow');
+        loudSound('meow');
       } else {
-        console.log('meow');
+        quietSound('meow');
       }
     } else if (species === 'dog') {
       if (loud) {
-        console.log('woof');
-        console.log('woof');
+        loudSound('woof');
       } else {
-        console.log('woof');
+        quietSound('woof');
       }
     } else if (species === 'leopard') {
       if (loud) {
-        console.log('growl');
-        console.log('growl');
+        loudSound('growl');
       } else {
-        console.log('growl');
+        quietSound('growl');
       }
     } else if (species === 'hadedah') {
       if (loud) {
-        console.log('squawk');
-        console.log('squawk');
+        loudSound('squawk');
       } else {
-        console.log('squawk');
+        quietSound('squawk');
         throw new Error('there is no such thing as a quiet hadedah!');
       }
     } else if (species === 'eagle') {
       if (loud) {
-        console.log('caw');
-        console.log('caw');
+        loudSound('caw');
       } else {
-        console.log('caw');
+        quietSound('caw');
       }
     } else if (species === 'owl') {
       if (loud) {
-        console.log('hoot');
-        console.log('hoot');
+        loudSound('hoot');
       } else {
-        console.log('hoot');
+        quietSound('hoot');
       }
     }
   }
