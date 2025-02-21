@@ -39,9 +39,6 @@ function createNoisyAnimal(species) {
   }
 
   function makeNoise({ loud = true } = {}) {
-    if (isBird() && !loud) {
-      makeBirdNoise(loud);
-    }
     if (loud) {
       if (mammalNoise()) {
         console.log(mammalNoise());
@@ -52,6 +49,8 @@ function createNoisyAnimal(species) {
       }
     } else if (['cat', 'dog', 'leopard'].includes(species)) {
       console.log(mammalNoise());
+    } else if (isBird()) {
+      makeBirdNoise(loud);
     }
   }
 
