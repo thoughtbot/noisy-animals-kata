@@ -19,17 +19,13 @@ function createNoisyAnimal(species) {
   function makeBirdNoiseLoud() {
     if (species === 'hadedah') {
       console.log('squawk');
-    } else if (species === 'eagle') {
-      console.log('caw');
-    } else {
-      console.log('hoot');
-    }
-    if (species === 'owl') {
-      console.log('hoot');
-    } else if (species === 'eagle') {
-      console.log('caw');
-    } else if (species === 'hadedah') {
       console.log('squawk');
+    } else if (species === 'eagle') {
+      console.log('caw');
+      console.log('caw');
+    } else if (species === 'owl') {
+      console.log('hoot');
+      console.log('hoot');
     }
   }
 
