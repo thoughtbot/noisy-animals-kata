@@ -1,24 +1,8 @@
 # Noisy Animals Kata
-
-Install noisy animals:
-
-```
-bundle install
-```
-
-Then see the tests demonstrate how noisy the animals are:
-
-```
-bundle exec rspec
-```
-
-## Context
-The `NoisyAnimal` class outputs noise for several animals and birds. Code that calls the `make_noise` instance can request a noise that is loud or not. [Hadedahs](https://www.youtube.com/results?search_query=hadedah+noise) do not generate quiet noises.
-
-## The exercise
 This small exercise is designed to help thinking about and improve code.
 
-The NoisyAnimal class has some poor code in it. Can you spot and fix some problems?
+## Context
+The Noisy Animal code outputs noise for several animals and birds. Client code can request a noise that is loud or not. [Hadedahs](https://www.youtube.com/results?search_query=hadedah+noise) do not generate quiet noises.
 
 ### New requirements are so great!
 When/If you're feeling comfortable with the code, try adding these animals:
@@ -26,14 +10,15 @@ When/If you're feeling comfortable with the code, try adding these animals:
 - A snake that makes the noise "hiss" when it is loud and "slither" when it is not loud
 - A mouse that is so silent that it outputs exactly one blank line, whether loud or quiet
 
-Support the `true` or `false` values for the `is_loud` flag in both cases.
-
-Don't forget the tests for your new requirements! Don't change the content of any existing tests, although you can reorganise the order and the context and describe blocks if it is helpful.
-
 ## Self reflection before you start
-- What domain (related to animals and noise) concepts can you identify and what are the important differences between these?
+- What domain (related to animals and noise) concepts can you identify and what are the important differences between these? It's normal to feel like this code hides the concepts, you might feel better after trying the exercise
 - What problems can you identify if you think for 5 minutes before you start changing code?
 - What sort of changes do you think will address these problems?
+
+## The code
+Language-specific instructions are here:
+
+- [Ruby](/ruby)
 
 ## Self reflection after trying to make changes
 - Does your starting list of problems still feel complete?
@@ -42,7 +27,7 @@ Don't forget the tests for your new requirements! Don't change the content of an
 - Have you found yourself trying something and then realising it wouldn't work? How easy was it to get back to something that did work?
 - Do you make git commits as you make your changes?
 - How often do you run the tests? What if you could only run them once every 10 minutes? Or 30 minutes?
-- What would it take to run the tests every time you changed a line of `noisy_animal.rb`?
+- What would it take to run the tests every time you changed a line of code?
 - Is it easier to add the new animals before or after addressing some of the problems?
 - After introducing the new animals is the code going to be easier or harder to change in future than it was before you started?
 - How do you think that code might start out well and end up as confusing as this over time?
