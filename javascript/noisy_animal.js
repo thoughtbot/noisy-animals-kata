@@ -26,23 +26,25 @@ function createNoisyAnimal(species) {
       }
     }
     if (['owl', 'eagle', 'hadedah'].includes(species)) {
-      if (loud) {
-        if (species === 'hadedah') {
+      if (species === 'hadedah') {
+        if (loud) {
           console.log('squawk');
           console.log('squawk');
-        } else if (species === 'eagle') {
-          console.log('caw');
-          console.log('caw');
-        } else if (species === 'owl') {
-          console.log('hoot');
-          console.log('hoot');
-        }
-      } else {
-        if (species === 'hadedah') {
+        } else {
           console.log('squawk');
           throw new Error('there is no such thing as a quiet hadedah!');
-        } else if (species === 'eagle') {
+        }
+      } else if (species === 'eagle') {
+        if (loud) {
           console.log('caw');
+          console.log('caw');
+        } else {
+          console.log('caw');
+        }
+      } else if (species === 'owl') {
+        if (loud) {
+          console.log('hoot');
+          console.log('hoot');
         } else {
           console.log('hoot');
         }
