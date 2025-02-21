@@ -44,7 +44,7 @@ function createNoisyAnimal(species) {
 
   function makeNoise({ loud = true } = {}) {
     if (loud) {
-      if (mammalNoise()) {
+      if (isMammal()) {
         console.log(mammalNoise());
         console.log(mammalNoise());
       }
