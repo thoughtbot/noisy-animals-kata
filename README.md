@@ -7,9 +7,8 @@ The Noisy Animal code outputs noise for several animals and birds. Client code c
 ## Self reflection before you start
 Looking at [the code for your language of choice](#the-code):
 
-- What domain (related to animals and noise) concepts can you identify and what are the important differences between these?
-- What problems can you identify if you think for 5 minutes before you start changing code?
-- What sort of changes do you think will address these problems?
+- What domain concepts can you identify and what are the important differences between these? For instance, how many animals are there?
+- What do you think the ideal form of this code is?
 
 ## Try cleaning it up!
 It's normal to feel like this code hides some important concepts. It is pretty bad. Are you able to fix some of the problems you identified?
@@ -27,15 +26,14 @@ Language-specific instructions are here:
 - [Javascript](/javascript)
 
 ## Self reflection after trying to make changes
-- Does your starting list of problems still feel complete?
-- If you rewrote the list now, would it be different? How and why?
-- Does your current assessment of the NoisyAnimal problems feel similar or different to other code you read or work with?
+- What domain concepts can you identify now? Has your understanding of the domain improved?
 - Have you found yourself trying something and then realising it wouldn't work? How easy was it to get back to something that did work?
 - Do you make git commits as you make your changes?
 - How often do you run the tests? What if you could only run them once every 10 minutes? Or 30 minutes?
 - What would it take to run the tests every time you changed a line of code?
 - Is it easier to add the new animals before or after addressing some of the problems?
 - After introducing the new animals is the code going to be easier or harder to change in future than it was before you started?
+- Does your current assessment of the NoisyAnimal problems feel similar or different to other code you read or work with?
 - How do you think that code might start out well and end up as confusing as this over time?
 
 ## Hints
