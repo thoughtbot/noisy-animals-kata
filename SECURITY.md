@@ -1,3 +1,5 @@
+<!-- START /templates/security.md -->
+
 # Security Policy
 
 ## Supported Versions
@@ -15,3 +17,5 @@ For security inquiries or vulnerability reports, visit
 <https://thoughtbot.com/security>.
 
 If you have any suggestions to improve this policy, visit <https://thoughtbot.com/security>.
+
+<!-- END /templates/security.md -->
