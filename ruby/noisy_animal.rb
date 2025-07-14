@@ -20,7 +20,7 @@ class NoisyAnimal
       'cat' => Voice['meow'],
       'eagle' => Voice['caw'],
       'owl' => Voice['hoot'],
-      'hadedah' => WithoutQuietVoice.new(Voice['squawk'])
+      'hadedah' => WithoutQuiet.new(Voice['squawk'])
     }[species]
   end
 end
@@ -31,6 +31,6 @@ Voice = Struct.new(:noise) do
   def loud = 2.times { puts noise }
 end
 
-class WithoutQuietVoice < SimpleDelegator
+class WithoutQuiet < SimpleDelegator
   def quiet = raise "no such thing!"
 end
