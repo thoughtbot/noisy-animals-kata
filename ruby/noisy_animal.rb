@@ -25,7 +25,7 @@ class NoisyAnimal
   end
 end
 
-Voice = Struct.new(:noise) do
+Voice = Data.define(:noise) do
   def quiet = puts noise
 
   def loud = 2.times { puts noise }
