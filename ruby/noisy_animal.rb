@@ -20,7 +20,8 @@ class NoisyAnimal
       'cat' => Voice['meow'],
       'eagle' => Voice['caw'],
       'owl' => Voice['hoot'],
-      'hadedah' => WithoutQuiet.new(Voice['squawk'])
+      'hadedah' => WithoutQuiet.new(Voice['squawk']),
+      'mouse' => SingleVolume.new(Voice[''])
     }[species]
   end
 end
@@ -33,4 +34,8 @@ end
 
 class WithoutQuiet < SimpleDelegator
   def quiet = raise "no such thing!"
+end
+
+class SingleVolume < SimpleDelegator
+  def loud = quiet
 end
