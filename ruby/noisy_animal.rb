@@ -10,28 +10,22 @@ class NoisyAnimal
   end
 
   def make_noise(loud: true)
-    loud ? voice_for_species.loud : voice_for_species.quiet
+    loud ? voice.loud : voice.quiet
   end
 
-  def voice_for_species
-    case species
-    when 'dog'
-      Voice['woof']
-    when 'leopard'
-      Voice['growl']
-    when 'cat'
-      Voice['meow']
-    when 'eagle'
-      Voice['caw']
-    when 'owl'
-      Voice['hoot']
-    when 'hadedah'
-      WithoutQuietVoice.new(Voice['squawk'])
-    end
+  def voice
+    {
+      'dog' => Voice['woof'],
+      'leopard' => Voice['growl'],
+      'cat' => Voice['meow'],
+      'eagle' => Voice['caw'],
+      'owl' => Voice['hoot'],
+      'hadedah' => WithoutQuietVoice.new(Voice['squawk'])
+    }[species]
   end
 end
 
-Voice = Data.define(:noise) do
+Voice = Struct.new(:noise) do
   def quiet = puts noise
 
   def loud = 2.times { puts noise }
