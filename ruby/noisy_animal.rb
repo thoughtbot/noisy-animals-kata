@@ -14,7 +14,7 @@ class NoisyAnimal
   end
 
   def voice
-    {
+    @voice ||= {
       'dog' => Voice['woof'],
       'leopard' => Voice['growl'],
       'cat' => Voice['meow'],
