@@ -10,43 +10,31 @@ class NoisyAnimal
   end
 
   def make_noise(loud: true)
-    animal = Animal.from_species(species)
-    loud ? animal.loud : animal.quiet
+    loud ? animal_for_species.loud : animal_for_species.quiet
+  end
+
+  def animal_for_species
+    case species
+    when 'dog'
+      Animal['woof']
+    when 'leopard'
+      Animal['growl']
+    when 'cat'
+      Animal['meow']
+    when 'eagle'
+      Animal['caw']
+    when 'owl'
+      Animal['hoot']
+    when 'hadedah'
+      WithoutQuietVoice.new(Animal['squawk'])
+    end
   end
 end
 
-class Animal
-  attr_accessor :quiet_noise, :loud_noise
+Animal = Data.define(:noise) do
+  def quiet = puts noise
 
-  def self.from_species(species)
-    case species
-    when 'hadedah'
-      WithoutQuietVoice.new(Animal.new('', %w[squawk squawk]))
-    when 'dog'
-      Animal.new('woof', %w[woof woof])
-    when 'leopard'
-      Animal.new('growl', %w[growl growl])
-    when 'cat'
-      Animal.new('meow', %w[meow meow])
-    when 'eagle'
-      Animal.new('caw', %w[caw caw])
-    when 'owl'
-      Animal.new('hoot', %w[hoot hoot])
-    when 'snake'
-      Animal.new('slither', 'hiss')
-    when 'mouse'
-      Animal.new('', '')
-    end
-  end
-
-  def initialize(quiet_noise = '', loud_noise = '')
-    @quiet_noise = quiet_noise
-    @loud_noise = loud_noise
-  end
-
-  def quiet = puts quiet_noise
-
-  def loud = puts loud_noise
+  def loud = 2.times { puts noise }
 end
 
 class WithoutQuietVoice < SimpleDelegator
