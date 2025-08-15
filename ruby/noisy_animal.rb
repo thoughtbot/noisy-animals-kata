@@ -30,29 +30,25 @@ class NoisyAnimal
     }[species]
   end
 
-  def make_bird_noise_loud
-    noise = if species == 'hadedah'
+  def bird_noise
+    if species == 'hadedah'
       'squawk'
     elsif species == 'eagle'
       'caw'
     else
       'hoot'
     end
+  end
+
+  def make_bird_noise_loud
     2.times do
-      puts noise
+      puts bird_noise
     end
   end
 
   def make_bird_noise_quiet
-    noise = if species == 'hadedah'
-      'squawk'
-    elsif species == 'eagle'
-      'caw'
-    else
-      'hoot'
-    end
     1.times do
-      puts noise
+      puts bird_noise
     end
   end
 
