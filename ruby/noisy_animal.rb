@@ -13,7 +13,7 @@ class NoisyAnimal
     elsif loud && is_bird
       2.times { puts bird_noise }
     elsif !loud && is_animal
-      puts animal_noise
+      1.times { puts animal_noise }
     elsif !loud && is_bird
       1.times { puts bird_noise }
       raise 'there is no such thing as a quiet hadedah!' if species == 'hadedah'
