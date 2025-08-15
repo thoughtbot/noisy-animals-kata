@@ -43,12 +43,14 @@ class NoisyAnimal
   end
 
   def make_bird_noise_quiet
-    if species == 'hadedah'
-      puts 'squawk'
-    elsif species == 'eagle'
-      puts 'caw'
-    else
-      puts 'hoot'
+    1.times do
+      if species == 'hadedah'
+        puts 'squawk'
+      elsif species == 'eagle'
+        puts 'caw'
+      else
+        puts 'hoot'
+      end
     end
   end
 
