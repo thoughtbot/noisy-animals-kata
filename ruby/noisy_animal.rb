@@ -40,16 +40,14 @@ class NoisyAnimal
     else
       puts 'hoot'
     end
-    if is_loud
-      if species == 'owl'
-        puts 'hoot'
-      end
-      if species == 'eagle'
-        puts 'caw'
-      end
-      if species == 'hadedah'
-        puts 'squawk'
-      end
+    if species == 'owl'
+      puts 'hoot'
+    end
+    if species == 'eagle'
+      puts 'caw'
+    end
+    if species == 'hadedah'
+      puts 'squawk'
     end
   end
 
