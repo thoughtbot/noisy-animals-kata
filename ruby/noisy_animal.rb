@@ -31,13 +31,11 @@ class NoisyAnimal
   end
 
   def bird_noise
-    if species == 'hadedah'
-      'squawk'
-    elsif species == 'eagle'
-      'caw'
-    elsif species == 'owl'
-      'hoot'
-    end
+    {
+      'hadedah' => 'squawk',
+      'eagle' => 'caw',
+      'owl' => 'hoot'
+    }[species]
   end
 
   def is_bird
