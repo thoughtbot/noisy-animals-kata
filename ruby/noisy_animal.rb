@@ -8,7 +8,7 @@ class NoisyAnimal
   end
 
   def make_noise(loud: true)
-    if is_bird && !loud
+    if !loud && is_bird
       make_bird_noise_quiet
     end
     if loud && is_animal
