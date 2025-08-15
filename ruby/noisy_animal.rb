@@ -11,7 +11,7 @@ class NoisyAnimal
     if loud && is_animal
       2.times { puts animal_noise }
     elsif loud && is_bird
-      make_bird_noise_loud
+      2.times { puts bird_noise }
     elsif !loud && is_animal
       puts animal_noise
     elsif !loud && is_bird
@@ -37,12 +37,6 @@ class NoisyAnimal
       'caw'
     else
       'hoot'
-    end
-  end
-
-  def make_bird_noise_loud
-    2.times do
-      puts bird_noise
     end
   end
 
