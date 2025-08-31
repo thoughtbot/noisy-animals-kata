@@ -15,7 +15,7 @@ class NoisyAnimal
       2.times { puts animal_noise }
     elsif loud && is_bird
       make_bird_noise(true)
-    elsif is_animal
+    elsif !loud && is_animal
       puts animal_noise
     end
   end
