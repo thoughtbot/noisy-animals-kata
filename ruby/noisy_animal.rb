@@ -11,13 +11,10 @@ class NoisyAnimal
     if is_bird && !loud
       make_bird_noise(false)
     end
-    if loud
-      if is_animal
-        2.times { puts animal_noise }
-      end
-      if is_bird
-        make_bird_noise(true)
-      end
+    if loud && is_animal
+      2.times { puts animal_noise }
+    elsif loud && is_bird
+      make_bird_noise(true)
     elsif is_animal
       puts animal_noise
     end
