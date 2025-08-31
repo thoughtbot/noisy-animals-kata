@@ -12,7 +12,7 @@ class NoisyAnimal
       make_bird_noise(false)
     end
     if loud
-      if animal_noise
+      if is_animal
         2.times { puts animal_noise }
       end
       if is_bird
