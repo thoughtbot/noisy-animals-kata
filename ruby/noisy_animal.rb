@@ -13,9 +13,9 @@ class NoisyAnimal
     elsif is_animal && !loud
       puts animal_noise
     elsif is_bird && loud
-      make_bird_noise(true)
+      make_bird_noise_loud
     elsif is_bird && !loud
-      make_bird_noise(false)
+      make_bird_noise_quiet
     end
   end
 
@@ -75,9 +75,6 @@ class NoisyAnimal
     else
       raise 'there is no such thing as a quiet hadedah!' if species == 'hadedah'
     end
-  end
-  def make_bird_noise(is_loud = true)
-    is_loud ? make_bird_noise_loud : make_bird_noise_quiet
   end
 
   def is_bird
