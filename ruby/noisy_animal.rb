@@ -8,7 +8,12 @@ class NoisyAnimal
   end
 
   def make_noise(loud: true)
-    if is_animal && loud
+    if species == 'hadedah' && loud
+      2.times { puts bird_noise }
+    elsif species == 'hadedah' && !loud
+      puts bird_noise
+      raise 'there is no such thing as a quiet hadedah!'
+    elsif is_animal && loud
       2.times { puts animal_noise }
     elsif is_animal && !loud
       puts animal_noise
@@ -16,7 +21,6 @@ class NoisyAnimal
       2.times { puts bird_noise }
     elsif is_bird && !loud
       puts bird_noise
-      raise 'there is no such thing as a quiet hadedah!' if species == 'hadedah'
     end
   end
 
