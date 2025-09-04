@@ -13,9 +13,10 @@ class NoisyAnimal
     elsif is_animal && !loud
       puts animal_noise
     elsif is_bird && loud
-      make_bird_noise_loud
+      2.times { puts bird_noise }
     elsif is_bird && !loud
-      make_bird_noise_quiet
+      puts bird_noise
+      raise 'there is no such thing as a quiet hadedah!' if species == 'hadedah'
     end
   end
 
@@ -35,15 +36,6 @@ class NoisyAnimal
       'eagle' => 'caw',
       'owl' => 'hoot'
     }[species]
-  end
-
-  def make_bird_noise_loud
-    2.times { puts bird_noise }
-  end
-
-  def make_bird_noise_quiet
-    puts bird_noise
-    raise 'there is no such thing as a quiet hadedah!' if species == 'hadedah'
   end
 
   def is_bird
