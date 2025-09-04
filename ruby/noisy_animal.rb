@@ -34,6 +34,10 @@ class NoisyAnimal
     }[species]
   end
 
+  def is_animal
+    %w[cat dog leopard].include?(species)
+  end
+
   def bird_noise
     {
       'hadedah' => 'squawk',
@@ -44,9 +48,5 @@ class NoisyAnimal
 
   def is_bird
     species == 'owl' || species == 'eagle' || species == 'hadedah'
-  end
-
-  def is_animal
-    %w[cat dog leopard].include?(species)
   end
 end
