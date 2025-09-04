@@ -17,10 +17,6 @@ class NoisyAnimal
       2.times { puts creature_noise }
     elsif is_creature && !loud
       puts creature_noise
-    elsif is_creature && loud
-      2.times { puts creature_noise }
-    elsif is_creature && !loud
-      puts creature_noise
     end
   end
 
