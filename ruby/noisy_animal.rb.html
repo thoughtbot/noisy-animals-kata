@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<!-- Created by htmlize-1.57 in css mode. -->
+<html>
+  <head>
+    <!-- <title>noisy_animal.rb</title> -->
+    <style type="text/css">
+    <!--
+      body {
+        color: #333333;
+        background-color: #FFFFFF;
+      }
+      .builtin {
+        /* font-lock-builtin-face */
+        color: #006FE0;
+      }
+      .comment {
+        /* font-lock-comment-face */
+        color: #8D8D84;
+        background-color: #292e34;
+        font-style: italic;
+      }
+      .comment-delimiter {
+        /* font-lock-comment-delimiter-face */
+        color: #8D8D84;
+      }
+      .constant {
+        /* font-lock-constant-face */
+        color: #D0372D;
+      }
+      .function-name {
+        /* font-lock-function-name-face */
+        color: #006699;
+      }
+      .highlight-numbers-number {
+        /* highlight-numbers-number */
+        color: #D0372D;
+      }
+      .hl-line {
+        /* hl-line */
+        background-color: #F6FECD;
+      }
+      .keyword {
+        /* font-lock-keyword-face */
+        color: #0000FF;
+      }
+      .negation-char {
+        /* font-lock-negation-char-face */
+        color: #a45bad;
+      }
+      .rainbow-delimiters-depth-1 {
+        /* rainbow-delimiters-depth-1-face */
+        color: #707183;
+      }
+      .sp-show-pair-match {
+        /* sp-show-pair-match-face */
+        color: #86dc2f;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+      .sp-show-pair-match-content {
+      }
+      .string {
+        /* font-lock-string-face */
+        color: #008000;
+      }
+      .type {
+        /* font-lock-type-face */
+        color: #6434A3;
+      }
+      .variable-name {
+        /* font-lock-variable-name-face */
+        color: #BA36A5;
+      }
+
+      a {
+        color: inherit;
+        background-color: inherit;
+        font: inherit;
+        text-decoration: inherit;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    -->
+    </style>
+  </head>
+  <body>
+    <pre>
+<span class="comment-delimiter"># </span><span class="comment">frozen_string_literal: true
+</span>
+<span class="keyword"><span class="sp-show-pair-match"><span class="hl-line">class</span></span></span><span class="sp-show-pair-match-content"><span class="hl-line"> </span></span><span class="type"><span class="sp-show-pair-match-content"><span class="hl-line">NoisyAnimal</span></span></span><span class="sp-show-pair-match-content"><span class="hl-line">
+</span></span><span class="sp-show-pair-match-content">  </span><span class="builtin"><span class="sp-show-pair-match-content">attr_reader</span></span><span class="sp-show-pair-match-content"> </span><span class="constant"><span class="sp-show-pair-match-content">:species</span></span><span class="sp-show-pair-match-content">
+
+  </span><span class="keyword"><span class="sp-show-pair-match-content">def</span></span><span class="sp-show-pair-match-content"> </span><span class="function-name"><span class="sp-show-pair-match-content">initialize</span></span><span class="rainbow-delimiters-depth-1"><span class="sp-show-pair-match-content">(</span></span><span class="sp-show-pair-match-content">species</span><span class="rainbow-delimiters-depth-1"><span class="sp-show-pair-match-content">)</span></span><span class="sp-show-pair-match-content">
+    </span><span class="variable-name"><span class="sp-show-pair-match-content">@species</span></span><span class="sp-show-pair-match-content"> = species
+  </span><span class="keyword"><span class="sp-show-pair-match-content">end</span></span><span class="sp-show-pair-match-content">
+
+  </span><span class="keyword"><span class="sp-show-pair-match-content">def</span></span><span class="sp-show-pair-match-content"> </span><span class="function-name"><span class="sp-show-pair-match-content">make_noise</span></span><span class="rainbow-delimiters-depth-1"><span class="sp-show-pair-match-content">(</span></span><span class="constant"><span class="sp-show-pair-match-content">loud:</span></span><span class="sp-show-pair-match-content"> </span><span class="constant"><span class="sp-show-pair-match-content">true</span></span><span class="rainbow-delimiters-depth-1"><span class="sp-show-pair-match-content">)</span></span><span class="sp-show-pair-match-content">
+    </span><span class="keyword"><span class="sp-show-pair-match-content">if</span></span><span class="sp-show-pair-match-content"> is_bird &amp;&amp; </span><span class="negation-char"><span class="sp-show-pair-match-content">!</span></span><span class="sp-show-pair-match-content">loud
+      make_bird_noise</span><span class="rainbow-delimiters-depth-1"><span class="sp-show-pair-match-content">(</span></span><span class="constant"><span class="sp-show-pair-match-content">false</span></span><span class="rainbow-delimiters-depth-1"><span class="sp-show-pair-match-content">)</span></span><span class="sp-show-pair-match-content">
+    </span><span class="keyword"><span class="sp-show-pair-match-content">end</span></span><span class="sp-show-pair-match-content">
+    </span><span class="keyword"><span class="sp-show-pair-match-content">if</span></span><span class="sp-show-pair-match-content"> loud
+      </span><span class="keyword"><span class="sp-show-pair-match-content">if</span></span><span class="sp-show-pair-match-content"> animal_noise
+        </span><span class="highlight-numbers-number"><span class="sp-show-pair-match-content">2</span></span><span class="sp-show-pair-match-content">.times </span><span class="rainbow-delimiters-depth-1"><span class="sp-show-pair-match-content">{</span></span><span class="sp-show-pair-match-content"> </span><span class="builtin"><span class="sp-show-pair-match-content">puts</span></span><span class="sp-show-pair-match-content"> animal_noise </span><span class="rainbow-delimiters-depth-1"><span class="sp-show-pair-match-content">}</span></span><span class="sp-show-pair-match-content">
+      </span><span class="keyword"><span class="sp-show-pair-match-content">end</span></span><span class="sp-show-pair-match-content">
+      make_bird_noise</span><span class="rainbow-delimiters-depth-1"><span class="sp-show-pair-match-content">(</span></span><span class="constant"><span class="sp-show-pair-match-content">true</span></span><span class="rainbow-delimiters-depth-1"><span class="sp-show-pair-match-content">)</span></span><span class="sp-show-pair-match-content"> </span><span class="keyword"><span class="sp-show-pair-match-content">if</span></span><span class="sp-show-pair-match-content"> is_bird
+    </span><span class="keyword"><span class="sp-show-pair-match-content">elsif</span></span><span class="sp-show-pair-match-content"> </span><span class="string"><span class="sp-show-pair-match-content">%w[cat dog leopard]</span></span><span class="sp-show-pair-match-content">.include?</span><span class="rainbow-delimiters-depth-1"><span class="sp-show-pair-match-content">(</span></span><span class="sp-show-pair-match-content">species</span><span class="rainbow-delimiters-depth-1"><span class="sp-show-pair-match-content">)</span></span><span class="sp-show-pair-match-content">
+      </span><span class="builtin"><span class="sp-show-pair-match-content">puts</span></span><span class="sp-show-pair-match-content"> animal_noise
+    </span><span class="keyword"><span class="sp-show-pair-match-content">end</span></span><span class="sp-show-pair-match-content">
+  </span><span class="keyword"><span class="sp-show-pair-match-content">end</span></span><span class="sp-show-pair-match-content">
+
+  </span><span class="builtin"><span class="sp-show-pair-match-content">private</span></span><span class="sp-show-pair-match-content">
+
+  </span><span class="keyword"><span class="sp-show-pair-match-content">def</span></span><span class="sp-show-pair-match-content"> </span><span class="function-name"><span class="sp-show-pair-match-content">animal_noise</span></span><span class="sp-show-pair-match-content">
+    </span><span class="rainbow-delimiters-depth-1"><span class="sp-show-pair-match-content">{</span></span><span class="sp-show-pair-match-content">
+      </span><span class="string"><span class="sp-show-pair-match-content">'cat'</span></span><span class="sp-show-pair-match-content"> =&gt; </span><span class="string"><span class="sp-show-pair-match-content">'meow'</span></span><span class="sp-show-pair-match-content">,
+      </span><span class="string"><span class="sp-show-pair-match-content">'dog'</span></span><span class="sp-show-pair-match-content"> =&gt; </span><span class="string"><span class="sp-show-pair-match-content">'woof'</span></span><span class="sp-show-pair-match-content">,
+      </span><span class="string"><span class="sp-show-pair-match-content">'leopard'</span></span><span class="sp-show-pair-match-content"> =&gt; </span><span class="string"><span class="sp-show-pair-match-content">'growl'</span></span><span class="sp-show-pair-match-content">
+    </span><span class="rainbow-delimiters-depth-1"><span class="sp-show-pair-match-content">}[</span></span><span class="sp-show-pair-match-content">species</span><span class="rainbow-delimiters-depth-1"><span class="sp-show-pair-match-content">]</span></span><span class="sp-show-pair-match-content">
+  </span><span class="keyword"><span class="sp-show-pair-match-content">end</span></span><span class="sp-show-pair-match-content">
+
+  </span><span class="keyword"><span class="sp-show-pair-match-content">def</span></span><span class="sp-show-pair-match-content"> </span><span class="function-name"><span class="sp-show-pair-match-content">make_bird_noise</span></span><span class="rainbow-delimiters-depth-1"><span class="sp-show-pair-match-content">(</span></span><span class="sp-show-pair-match-content">is_loud = </span><span class="constant"><span class="sp-show-pair-match-content">true</span></span><span class="rainbow-delimiters-depth-1"><span class="sp-show-pair-match-content">)</span></span><span class="sp-show-pair-match-content">
+    </span><span class="keyword"><span class="sp-show-pair-match-content">if</span></span><span class="sp-show-pair-match-content"> species == </span><span class="string"><span class="sp-show-pair-match-content">'hadedah'</span></span><span class="sp-show-pair-match-content">
+      </span><span class="builtin"><span class="sp-show-pair-match-content">puts</span></span><span class="sp-show-pair-match-content"> </span><span class="string"><span class="sp-show-pair-match-content">'squawk'</span></span><span class="sp-show-pair-match-content">
+    </span><span class="keyword"><span class="sp-show-pair-match-content">elsif</span></span><span class="sp-show-pair-match-content"> species == </span><span class="string"><span class="sp-show-pair-match-content">'eagle'</span></span><span class="sp-show-pair-match-content">
+      </span><span class="builtin"><span class="sp-show-pair-match-content">puts</span></span><span class="sp-show-pair-match-content"> </span><span class="string"><span class="sp-show-pair-match-content">'caw'</span></span><span class="sp-show-pair-match-content">
+    </span><span class="keyword"><span class="sp-show-pair-match-content">else</span></span><span class="sp-show-pair-match-content">
+      </span><span class="builtin"><span class="sp-show-pair-match-content">puts</span></span><span class="sp-show-pair-match-content"> </span><span class="string"><span class="sp-show-pair-match-content">'hoot'</span></span><span class="sp-show-pair-match-content">
+    </span><span class="keyword"><span class="sp-show-pair-match-content">end</span></span><span class="sp-show-pair-match-content">
+    </span><span class="keyword"><span class="sp-show-pair-match-content">if</span></span><span class="sp-show-pair-match-content"> is_loud
+      </span><span class="keyword"><span class="sp-show-pair-match-content">if</span></span><span class="sp-show-pair-match-content"> species == </span><span class="string"><span class="sp-show-pair-match-content">'owl'</span></span><span class="sp-show-pair-match-content">
+        </span><span class="builtin"><span class="sp-show-pair-match-content">puts</span></span><span class="sp-show-pair-match-content"> </span><span class="string"><span class="sp-show-pair-match-content">'hoot'</span></span><span class="sp-show-pair-match-content">
+      </span><span class="keyword"><span class="sp-show-pair-match-content">end</span></span><span class="sp-show-pair-match-content">
+      </span><span class="keyword"><span class="sp-show-pair-match-content">if</span></span><span class="sp-show-pair-match-content"> species == </span><span class="string"><span class="sp-show-pair-match-content">'eagle'</span></span><span class="sp-show-pair-match-content">
+        </span><span class="builtin"><span class="sp-show-pair-match-content">puts</span></span><span class="sp-show-pair-match-content"> </span><span class="string"><span class="sp-show-pair-match-content">'caw'</span></span><span class="sp-show-pair-match-content">
+      </span><span class="keyword"><span class="sp-show-pair-match-content">end</span></span><span class="sp-show-pair-match-content">
+      </span><span class="keyword"><span class="sp-show-pair-match-content">if</span></span><span class="sp-show-pair-match-content"> species == </span><span class="string"><span class="sp-show-pair-match-content">'hadedah'</span></span><span class="sp-show-pair-match-content">
+        </span><span class="builtin"><span class="sp-show-pair-match-content">puts</span></span><span class="sp-show-pair-match-content"> </span><span class="string"><span class="sp-show-pair-match-content">'squawk'</span></span><span class="sp-show-pair-match-content">
+      </span><span class="keyword"><span class="sp-show-pair-match-content">end</span></span><span class="sp-show-pair-match-content">
+    </span><span class="keyword"><span class="sp-show-pair-match-content">else</span></span><span class="sp-show-pair-match-content">
+      </span><span class="builtin"><span class="sp-show-pair-match-content">raise</span></span><span class="sp-show-pair-match-content"> </span><span class="string"><span class="sp-show-pair-match-content">'there is no such thing as a quiet hadedah!'</span></span><span class="sp-show-pair-match-content"> </span><span class="keyword"><span class="sp-show-pair-match-content">if</span></span><span class="sp-show-pair-match-content"> species == </span><span class="string"><span class="sp-show-pair-match-content">'hadedah'</span></span><span class="sp-show-pair-match-content">
+    </span><span class="keyword"><span class="sp-show-pair-match-content">end</span></span><span class="sp-show-pair-match-content">
+  </span><span class="keyword"><span class="sp-show-pair-match-content">end</span></span><span class="sp-show-pair-match-content">
+
+  </span><span class="keyword"><span class="sp-show-pair-match-content">def</span></span><span class="sp-show-pair-match-content"> </span><span class="function-name"><span class="sp-show-pair-match-content">is_bird</span></span><span class="sp-show-pair-match-content">
+    species == </span><span class="string"><span class="sp-show-pair-match-content">'owl'</span></span><span class="sp-show-pair-match-content"> || species == </span><span class="string"><span class="sp-show-pair-match-content">'eagle'</span></span><span class="sp-show-pair-match-content"> || species == </span><span class="string"><span class="sp-show-pair-match-content">'hadedah'</span></span><span class="sp-show-pair-match-content">
+  </span><span class="keyword"><span class="sp-show-pair-match-content">end</span></span><span class="sp-show-pair-match-content">
+</span><span class="keyword"><span class="sp-show-pair-match">end</span></span>
+</pre>
+  </body>
+</html>
