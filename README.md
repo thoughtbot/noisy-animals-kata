@@ -24,6 +24,7 @@ Language-specific instructions are here:
 
 - [Ruby](/ruby)
 - [Javascript](/javascript)
+- [Javascript in the Browser](/javascript-in-the-browser)
 
 ## Self reflection after trying to make changes
 - What domain concepts can you identify now? Has your understanding of the domain improved?
